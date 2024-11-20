@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sanjay Panchal - Portfolio</title>
+    <meta name="next-head-count" content="4" />
+    <meta name="description" content="modern trending nextjs portfolio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" href="./public/favicon.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="./public/css/style1.css" as="style" />
+    <link rel="stylesheet" href="./public/css/style1.css" data-n-p="" />
+    <link rel="preload" href="./public/css/style2.css" as="style" />
+    <link rel="stylesheet" href="./public/css/style2.css" data-n-p="" />
+    <link rel="preload" href="./public/css/font-style.css" as="style" />
+    <link rel="stylesheet" href="./public/css/font-style.css" data-n-p="" />
+    <noscript data-n-css=""></noscript>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script> -->
+    <script src="./_next/static/chunks/webpack.js" defer=""></script>
+    <script src="./_next/static/chunks/framework.js" defer=""></script>
+    <script src="./_next/static/chunks/main.js" defer=""></script>
+    <script src="./_next/static/chunks/pages/app.js" defer=""></script>
+    <script src="./_next/static/chunks/675-c53794ad9e9ca32b.js" defer=""></script>
+    <script src="./_next/static/chunks/742-d6893190a68f34c4.js" defer=""></script>
+    <script src="./_next/static/chunks/about-me.js" defer=""></script>
+    <script src="./_next/static/chunks/pages/home-dark.js" defer=""></script>
+    <!-- <script src="./_next/static/0ZqRe7tBvCi2JGIPEL5_U/_buildManifest.js" defer=""></script>
+    <script src="./_next/static/0ZqRe7tBvCi2JGIPEL5_U/_ssgManifest.js" defer=""></script> -->
+    <script src="public/js/text-type.js"></script>
+</head>
+
+<body>
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+    </div>
+    <div id="__next">
+        <div class="yellow">
+            <div class="react-tabs" data-rttabs="true">
+            </div>
+        </div>
+        <div class="Toastify"></div>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+            {
+                "props": {
+                    "pageProps": {
+                    }
+                },
+                "page": "/home-dark",
+                "query": {
+                },
+                "buildId": "0ZqRe7tBvCi2JGIPEL5_U",
+                "nextExport": true,
+                "autoExport": true,
+                "isFallback": false,
+                "scriptLoader": [
+                ]
+            }
+        </script>
+    <script>
+        // const outerCircle = document.getElementById('outer-circle');
+        // const innerCircle = document.getElementById('inner-circle');
+
+        // // Update both circles on mousemove
+        // document.addEventListener('mousemove', (event) => {
+        //     const mouseX = event.pageX;
+        //     const mouseY = event.pageY;
+
+        //     // Move the inner circle immediately
+        //     innerCircle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+
+        //     // Add a slight delay for the outer circle
+        //     setTimeout(() => {
+        //         outerCircle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        //     }, 100); // Delay in milliseconds
+        // });
+
+        // Select the outer and inner circles
+        // const outerCircle = document.querySelector('.outer-circle');
+        // const innerCircle = document.querySelector('.inner-circle');
+
+        // // Store the mouse position
+        // let mouseX = 0;
+        // let mouseY = 0;
+
+        // // Function to update the mouse position
+        // document.addEventListener('mousemove', (e) => {
+        //   mouseX = e.clientX;
+        //   mouseY = e.clientY;
+
+        //   // Move the inner circle instantly
+        //   innerCircle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        // });
+
+        // // Function to create a trailing effect for the outer circle
+        // const moveOuterCircle = () => {
+        //   const currentX = parseFloat(outerCircle.style.left || 0);
+        //   const currentY = parseFloat(outerCircle.style.top || 0);
+
+        //   const deltaX = mouseX - currentX;
+        //   const deltaY = mouseY - currentY;
+
+        //   const speed = 0.2; // Adjust the speed of trailing effect
+
+        //   const newX = currentX + deltaX * speed;
+        //   const newY = currentY + deltaY * speed;
+
+        //   outerCircle.style.transform = `translate(${newX}px, ${newY}px)`;
+
+        //   // Request the next frame
+        // //   requestAnimationFrame(moveOuterCircle);
+        // };
+
+        // // Start the animation loop
+        // moveOuterCircle();
+
+
+        var cursor = {
+            delay: 8,
+            _x: 0,
+            _y: 0,
+            endX: window.innerWidth / 2,
+            endY: window.innerHeight / 2,
+            cursorVisible: true,
+            cursorEnlarged: false,
+            $dot: document.querySelector(".cursor-dot"),
+            $outline: document.querySelector(".cursor-dot-outline"),
+
+            init: function () {
+                // Set up element sizes
+                this.dotSize = this.$dot.offsetWidth;
+                this.outlineSize = this.$outline.offsetWidth;
+
+                this.setupEventListeners();
+                this.animateDotOutline();
+            },
+
+            //     updateCursor: function(e) {
+            //         var self = this;
+
+            //         console.log(e)
+
+            //         // Show the cursor
+            //         self.cursorVisible = true;
+            //         self.toggleCursorVisibility();
+
+            //         // Position the dot
+            //         self.endX = e.pageX;
+            //         self.endY = e.pageY;
+            //         self.$dot.style.top = self.endY + 'px';
+            //         self.$dot.style.left = self.endX + 'px';
+            //     },
+
+            setupEventListeners: function () {
+                var self = this;
+
+                // Anchor hovering
+                document.querySelectorAll("a").forEach(function (el) {
+                    el.addEventListener("mouseover", function () {
+                        self.cursorEnlarged = true;
+                        self.toggleCursorSize();
+                    });
+                    el.addEventListener("mouseout", function () {
+                        self.cursorEnlarged = false;
+                        self.toggleCursorSize();
+                    });
+                });
+
+                // Click events
+                document.addEventListener("mousedown", function () {
+                    self.cursorEnlarged = true;
+                    self.toggleCursorSize();
+                });
+                document.addEventListener("mouseup", function () {
+                    self.cursorEnlarged = false;
+                    self.toggleCursorSize();
+                });
+
+                document.addEventListener("mousemove", function (e) {
+                    // Show the cursor
+                    self.cursorVisible = true;
+                    self.toggleCursorVisibility();
+
+                    // Position the dot
+                    self.endX = e.pageX;
+                    self.endY = e.pageY;
+                    self.$dot.style.top = self.endY + "px";
+                    self.$dot.style.left = self.endX + "px";
+                });
+
+                // Hide/show cursor
+                document.addEventListener("mouseenter", function (e) {
+                    self.cursorVisible = true;
+                    self.toggleCursorVisibility();
+                    self.$dot.style.opacity = 1;
+                    self.$outline.style.opacity = 1;
+                });
+
+                document.addEventListener("mouseleave", function (e) {
+                    self.cursorVisible = true;
+                    self.toggleCursorVisibility();
+                    self.$dot.style.opacity = 0;
+                    self.$outline.style.opacity = 0;
+                });
+            },
+
+            animateDotOutline: function () {
+                var self = this;
+
+                self._x += (self.endX - self._x) / self.delay;
+                self._y += (self.endY - self._y) / self.delay;
+                self.$outline.style.top = self._y + "px";
+                self.$outline.style.left = self._x + "px";
+
+                requestAnimationFrame(this.animateDotOutline.bind(self));
+            },
+
+            toggleCursorSize: function () {
+                var self = this;
+
+                if (self.cursorEnlarged) {
+                    self.$dot.style.transform = "translate(-50%, -50%) scale(0.75)";
+                    self.$outline.style.transform = "translate(-50%, -50%) scale(1.5)";
+                } else {
+                    self.$dot.style.transform = "translate(-50%, -50%) scale(1)";
+                    self.$outline.style.transform = "translate(-50%, -50%) scale(1)";
+                }
+            },
+
+            toggleCursorVisibility: function () {
+                var self = this;
+
+                if (self.cursorVisible) {
+                    self.$dot.style.opacity = 1;
+                    self.$outline.style.opacity = 1;
+                } else {
+                    self.$dot.style.opacity = 0;
+                    self.$outline.style.opacity = 0;
+                }
+            }
+        };
+
+        cursor.init();
+
+
+        // const imgInterval = setInterval(() => {
+        //     const image = document.getElementById('sun-image');
+        //     if (image && image?.hasAttribute('srcset')) {
+        //         image.removeAttribute('srcset');
+        //         console.log('srcset attribute removed');
+        //         image.src = '/public/img/sun.png';
+        //     } else {
+        //         // clearInterval(imgInterval);
+        //     }
+
+        // }, 1000);
+
+        // const mobileImgInterval = setInterval(() => {
+        //     const image = document.querySelector('.mobile-device-logo');
+        //     if (image && image?.hasAttribute('srcset')) {
+        //         image.removeAttribute('srcset');
+        //         console.log('srcset attribute removed');
+        //         image.src = './img/hero/mobile-banner.png';
+        //         // clearInterval(mobileImgInterval);
+        //     }
+
+        // }, 1000);
+
+        // const aboutImgInterval = setInterval(() => {
+        //     const image = document.querySelector('.about-logo');
+        //     if (image && image?.hasAttribute('srcset')) {
+        //         image.removeAttribute('srcset');
+        //         console.log('srcset attribute removed');
+        //         image.src = './img/hero/mobile-banner.png';
+        //         // clearInterval(aboutImgInterval);
+        //     }
+
+        // }, 1000);
+
+        // const dwnlbtnInterval = setInterval(() => {
+        //         const dwnldBtn = document.getElementById('downloadBtn');
+        //         if(dwnldBtn){
+        //             clearInterval(dwnlbtnInterval);
+        //             dwnldBtn.addEventListener('click', function() {
+        //                 const link = document.createElement('a'); // Create an anchor element
+        //                 link.href = './assets/pdf/Sanjay Panchal CV.pdf';       // Path to your PDF file
+        //                 link.download = 'sanjay panchal cv.pdf';     // Custom file name for download
+        //                 link.click();                             // Trigger the download
+        //             });
+        //         }
+        //     }, 2000);
+
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            // emailjs.init({
+            //     publicKey: "y5iNmgwMTF5s6_n9R",
+            // });
+            if (typeof emailjs !== 'undefined') {
+                console.log('EmailJS is loaded and initialized.');
+                // emailjs.send('service_alwb0dv', 'template_8ltuqug', { 
+                //                     name: 'Steave',
+                //     user_email: 'cohasi6031@kimasoft.com',
+                //     subject: "Contact to Sanjay Panchal", // You can change the subject if needed
+                //     message: 'Hey There '
+                // })
+                // .then(() => {
+                // alert("Email sent successfully!");
+                // })
+                // .catch((error) => {
+                // console.error("Email sending failed:", error);
+                // alert("Failed to send email. Please try again.");
+                // });
+
+                // document.getElementById("sendMailButton").addEventListener("click", () => {
+                //     const name = document.getElementsByName("name").value;
+                //     const user_email = document.getElementsByName("user_email").value;
+                //     const subject = document.getElementsByName("subject").value;
+                //     const message = document.getElementsByName("message").value;
+
+                //     // Validate inputs (optional but recommended)
+                //     if (!name || !user_email || !subject || !message) {
+                //         alert("Please fill out all fields.");
+                //         return;
+                //     }
+
+                //     const emailParams = {
+                //         name: name,
+                //         user_email: user_email,
+                //         subject: "Contact to Sanjay Panchal", // You can change the subject if needed
+                //         message: message,
+                //     };
+
+
+                //     emailjs.send('service_alwb0dv', 'template_8ltuqug', emailParams)
+                //         .then(() => {
+                //             alert("Email sent successfully!");
+                //         })
+                //         .catch((error) => {
+                //             console.error("Email sending failed:", error);
+                //             alert("Failed to send email. Please try again.");
+                //         });
+                // })
+            } else {
+                console.log('EmailJS is not loaded or initialization failed.');
+            }
+        })();
+
+    </script>
+</body>
+
+</html>
