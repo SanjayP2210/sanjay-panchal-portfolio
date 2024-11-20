@@ -74,31 +74,31 @@ emailjs.init({
                     // };
                     sendMessage = (s) => {
                         s.preventDefault();
-                        console.log('sendMessage called',e.current);
+                        console.log('sendMessage called', e.current);
                         const name = document.getElementsByName("name")[0].value;
                         const user_email = document.getElementsByName("user_email")[0].value;
                         const subject = document.getElementsByName("subject")[0].value;
                         const message = document.getElementsByName("message")[0].value;
-    
+
                         // Validate inputs (optional but recommended)
                         if (!name || !user_email || !subject || !message) {
                             alert("Please fill out all fields.");
                             return;
                         }
-    
+
                         const emailParams = {
                             name: name,
                             user_email: user_email,
                             subject: "Contact to Sanjay Panchal", // You can change the subject if needed
                             message: message,
                         };
-    
-    
+
+
                         emailjs.send('service_5f5cbnf', 'template_qhk84t9', emailParams)
                             .then(() => {
                                 console.log(e),
-                                c.Am.success("Message Sent Successfully!", { position: "top-right", autoClose: 2e3, hideProgressBar: !1, closeOnClick: !0, pauseOnHover: !0, draggable: !0, progress: void 0 }),
-                                document.getElementById("myForm").reset();
+                                    c.Am.success("Message Sent Successfully!", { position: "top-right", autoClose: 2e3, hideProgressBar: !1, closeOnClick: !0, pauseOnHover: !0, draggable: !0, progress: void 0 }),
+                                    document.getElementById("myForm").reset();
                             })
                             .catch((error) => {
                                 c.Am.error("Ops Message Not Sent!", { position: "top-right", autoClose: 2e3, hideProgressBar: !1, closeOnClick: !0, pauseOnHover: !0, draggable: !0, progress: void 0 });
@@ -145,11 +145,11 @@ emailjs.init({
             var A = a(5893);
             a(7294);
             let l = [
-                    { iconName: "fa fa-facebook", link: "https://www.facebook.com/" },
-                    { iconName: "fa fa-instagram", link: "https://instagram.com/" },
-                    { iconName: "fa fa-linkedin", link: "https://www.linkedin.com/in/sanjayp1994" },
-                    // { iconName: "fa fa-dribbble", link: "https://dribbble.com/" },
-                ],
+                { iconName: "fa fa-facebook", link: "https://www.facebook.com/" },
+                { iconName: "fa fa-instagram", link: "https://instagram.com/" },
+                { iconName: "fa fa-linkedin", link: "https://www.linkedin.com/in/sanjayp1994" },
+                // { iconName: "fa fa-dribbble", link: "https://dribbble.com/" },
+            ],
                 i = () =>
                     (0, A.jsx)("ul", {
                         className: "social list-unstyled pt-1 mb-5",
@@ -166,11 +166,9 @@ emailjs.init({
             var A = a(5893);
             a(7294);
             let l = [
-                    { title: "7", subTitle1: "years of", subTitle2: "experience" },
-                    { title: "10", subTitle1: "completed", subTitle2: "projects" },
-                    // { title: "15", subTitle1: "Happy", subTitle2: "customers" },
-                    // { title: "", subTitle1: "awards", subTitle2: "won" },
-                ],
+                { title: "7", subTitle1: "years of", subTitle2: "experience" },
+                { title: "10", subTitle1: "completed", subTitle2: "projects" },
+            ],
                 i = () =>
                     (0, A.jsx)("div", {
                         className: "row",
@@ -191,9 +189,6 @@ emailjs.init({
                             )
                         ),
                     }),
-                educationLeftSideList = [
-                    { year: "2010 - 2012", position: "Mangal Deep Vidhyalay", colleageName: "Ahmedbadad", details: "H.S.C - 67%" },
-                ],
                 t = () =>
                     (0, A.jsx)("ul", {
                         children: educationLeftSideList.map((e, s) =>
@@ -211,18 +206,24 @@ emailjs.init({
                             )
                         ),
                     }),
-                educationRightSideList = [
+                educationList = [
                     { year: "2012 - 2016", position: "Silver Oak Colleage", colleageName: "Ahmedabad", details: "Bachlor of Engineer - 6.8 CGPA" },
                     { year: "2000 - 2010", position: "Bhavik Vidhyalay", colleageName: "Ahmedbadad", details: "S.S.C - 48%" },
+                    { year: "2010 - 2012", position: "Mangal Deep Vidhyalay", colleageName: "Ahmedbadad", details: "H.S.C - 67%" },
                 ],
                 projectList = [
-                    { projectName : "ABSLI -LEAP", details: "Insurance Project" },
-                    { projectName : 'TTOYOU',  details: "Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol\n        elit, tempor incididunt" },
-                    { projectName : 'Make My Docs',  details: "Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur\n        elit, sed do eiusmod tempor duntt" },
+                    { projectName: "ABSLI -LEAP", details: "Insurance Project" },
+                    { projectName: 'TTOYOU', details: "Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol\n        elit, tempor incididunt" },
+                    { projectName: 'Make My Docs', details: "Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur\n        elit, sed do eiusmod tempor duntt" },
+                ],
+                experienceList = [
+                    { compnayName: 'INEXTURE SOLUTIONS LLP', year: 'Feb, 2020 - Present', designation: 'Senior Full Stack Developer' },
+                    { compnayName: 'Infinite Technology', year: 'Jul, 2016 - May,2018', designation: 'Backend Developer (.Net MVC)' },
+                    { compnayName: 'Infomeck', year: 'May, 2018 - Feb, 2020', designation: 'Full Stack Developer (Angular, .Net MVC)' },
                 ],
                 getEducationRightList = () =>
                     (0, A.jsx)("ul", {
-                        children: educationRightSideList.map((e, s) =>
+                        children: educationList.slice(0,2).map((e, s) =>
                             (0, A.jsxs)(
                                 "li",
                                 {
@@ -237,23 +238,61 @@ emailjs.init({
                             )
                         ),
                     }),
-                    getEducationLeftList= () =>
-                        (0, A.jsx)("ul", {
-                            children: educationLeftSideList.map((e, s) =>
-                                (0, A.jsxs)(
-                                    "li",
-                                    {
-                                        children: [
-                                            (0, A.jsx)("div", { className: "icon", children: (0, A.jsx)("i", { className: "fa fa-briefcase" }) }),
-                                            (0, A.jsx)("span", { className: "time open-sans-font text-uppercase", children: e.year }),
-                                            (0, A.jsxs)("h5", { className: "poppins-font text-uppercase", children: [e.position, (0, A.jsx)("span", { className: "place open-sans-font", children: e.colleageName })] }),
-                                            (0, A.jsx)("p", { className: "open-sans-font", children: e.details }),
-                                        ],
-                                    },
-                                    s
-                                )
-                            ),
-                        }),
+                getEducationLeftList = () =>
+                    (0, A.jsx)("ul", {
+                        children: educationList.slice(2, 3).map((e, s) =>
+                            (0, A.jsxs)(
+                                "li",
+                                {
+                                    children: [
+                                        (0, A.jsx)("div", { className: "icon", children: (0, A.jsx)("i", { className: "fa fa-briefcase" }) }),
+                                        (0, A.jsx)("span", { className: "time open-sans-font text-uppercase", children: e.year }),
+                                        (0, A.jsxs)("h5", { className: "poppins-font text-uppercase", children: [e.position, (0, A.jsx)("span", { className: "place open-sans-font", children: e.colleageName })] }),
+                                        (0, A.jsx)("p", { className: "open-sans-font", children: e.details }),
+                                    ],
+                                },
+                                s
+                            )
+                        ),
+                    }),
+                experienceRightListMap = () =>
+                    (0, A.jsx)("ul", {
+                        children: experienceList.slice(2, 3).map((e, s) =>
+                            (0, A.jsxs)(
+                                "li",
+                                {
+                                    children: [
+                                        (0, A.jsx)("div", { className: "icon", children: (0, A.jsx)("i", { className: "fa fa-briefcase" }) }),
+                                        (0, A.jsxs)("h5", {
+                                            className: "poppins-font text-uppercase", children: [e.compnayName, (0, A.jsx)("span",
+                                                { className: "place open-sans-font", children: e.designation })]
+                                        }),
+                                        (0, A.jsx)("p", { className: "open-sans-font", children: e.year }),
+                                    ],
+                                },
+                                s
+                            )
+                        ),
+                    }),
+                experienceLeftListMap = () =>
+                    (0, A.jsx)("ul", {
+                        children: experienceList.slice(0, 2).map((e, s) =>
+                            (0, A.jsxs)(
+                                "li",
+                                {
+                                    children: [
+                                        (0, A.jsx)("div", { className: "icon", children: (0, A.jsx)("i", { className: "fa fa-briefcase" }) }),
+                                        (0, A.jsxs)("h5", {
+                                            className: "poppins-font text-uppercase", children: [e.compnayName, (0, A.jsx)("span",
+                                                { className: "place open-sans-font", children: e.designation })]
+                                        }),
+                                        (0, A.jsx)("p", { className: "open-sans-font", children: e.year }),
+                                    ],
+                                },
+                                s
+                            )
+                        ),
+                    }),
                 projectListMap = () =>
                     (0, A.jsx)("ul", {
                         children: projectList.map((e, s) =>
@@ -270,7 +309,7 @@ emailjs.init({
                                 s
                             )
                         ),
-                    }),  
+                    }),
                 r = [
                     { meta: "first name", metaInfo: "Sanjay", hasColor: "" },
                     { meta: "last name", metaInfo: "Panchal", hasColor: "" },
@@ -396,21 +435,21 @@ emailjs.init({
                                         className: "col-12",
                                         children: (0, A.jsxs)("h3", { className: "text-uppercase pb-5 mb-0 text-start text-sm-center custom-title ft-wt-600", children: ["Experience "] }),
                                     }),
-                                    (0, A.jsx)("div", { className: "col-lg-6 m-15px-tb", children: (0, A.jsx)("div", { className: "resume-box", children: (0, A.jsx)(projectListMap, {}) }) }),
-                                    (0, A.jsx)("div", { className: "col-lg-6 m-15px-tb", children: (0, A.jsx)("div", { className: "resume-box", children: (0, A.jsx)(t, {}) }) }),
+                                    (0, A.jsx)("div", { className: "col-lg-6 m-15px-tb", children: (0, A.jsx)("div", { className: "resume-box", children: (0, A.jsx)(experienceLeftListMap, {}) }) }),
+                                    (0, A.jsx)("div", { className: "col-lg-6 m-15px-tb", children: (0, A.jsx)("div", { className: "resume-box", children: (0, A.jsx)(experienceRightListMap, {}) }) }),
                                 ],
                             }),
-                            (0, A.jsxs)("div", {
-                                className: "row",
-                                children: [
-                                    (0, A.jsx)("div", {
-                                        className: "col-12",
-                                        children: (0, A.jsxs)("h3", { className: "text-uppercase pb-5 mb-0 text-start text-sm-center custom-title ft-wt-600", children: ["Projects ", (0, A.jsx)("span", { children: "&" }), " Experience"] }),
-                                    }),
-                                    (0, A.jsx)("div", { className: "col-lg-6 m-15px-tb", children: (0, A.jsx)("div", { className: "resume-box", children: (0, A.jsx)(projectListMap, {}) }) }),
-                                    (0, A.jsx)("div", { className: "col-lg-6 m-15px-tb", children: (0, A.jsx)("div", { className: "resume-box", children: (0, A.jsx)(t, {}) }) }),
-                                ],
-                            }),
+                            // (0, A.jsxs)("div", {
+                            //     className: "row",
+                            //     children: [
+                            //         (0, A.jsx)("div", {
+                            //             className: "col-12",
+                            //             children: (0, A.jsxs)("h3", { className: "text-uppercase pb-5 mb-0 text-start text-sm-center custom-title ft-wt-600", children: ["Projects ", (0, A.jsx)("span", { children: "&" }), " Experience"] }),
+                            //         }),
+                            //         (0, A.jsx)("div", { className: "col-lg-6 m-15px-tb", children: (0, A.jsx)("div", { className: "resume-box", children: (0, A.jsx)(projectListMap, {}) }) }),
+                            //         (0, A.jsx)("div", { className: "col-lg-6 m-15px-tb", children: (0, A.jsx)("div", { className: "resume-box", children: (0, A.jsx)(t, {}) }) }),
+                            //     ],
+                            // }),
                         ],
                     }),
                 });
@@ -542,14 +581,14 @@ emailjs.init({
                 r = a(5675),
                 d = a.n(r);
             let m = {
-                    heroImage: "./public/img/hero/dark.jpg",
-                    heroMobileImage: t.Z,
-                    heroTitleName: "Sanjay Panchal",
-                    heroDesignation: "Web Developer",
-                    heroDescriptions:
-                        "I'm a Web Developer focused on\n  crafting clean & user‑friendly experiences, I am passionate about\n  building excellent software that improves the lives of those\n  around me.",
-                    heroBtn: "more about me",
-                },
+                heroImage: "./public/img/hero/dark.jpg",
+                heroMobileImage: t.Z,
+                heroTitleName: "Sanjay Panchal",
+                heroDesignation: "Web Developer",
+                heroDescriptions:
+                    "I love to create responsive and efficient websites for my customers. I love going through the entire process with the customer from concept, to design and then development and launch",
+                heroBtn: "more about me",
+            },
                 h = () => {
                     let [e, s] = (0, l.useState)(!1);
                     function a() {
@@ -567,36 +606,36 @@ emailjs.init({
                                             children: [
                                                 (0, A.jsx)(d(), { src: m.heroMobileImage, className: "mobile-device-logo img-fluid main-img-mobile d-sm-block d-lg-none", alt: "hero man" }),
                                                 // (0, A.jsxs)("h1", { className: "text-uppercase poppins-font", children: ["I'm", " ", m.heroTitleName, ".", (0, A.jsx)("span", { children: m.heroDesignation })] }),
-                                                (0, A.jsxs)("h1", { 
-                                                    className: "text-uppercase poppins-font", 
+                                                (0, A.jsxs)("h1", {
+                                                    className: "text-uppercase poppins-font",
                                                     children: [
-                                                      "I'm", 
-                                                      " ", 
-                                                      m.heroTitleName, 
-                                                      ".", 
-                                                    //   (0, A.jsx)("span", { children: m.heroDesignation }),
-                                                      (0, A.jsx)("span", { 
-                                                        className: "header-caption", 
-                                                        id: "page-top", 
-                                                        children: [
-                                                          (0, A.jsx)("span", { 
-                                                            className: "cd-headline clip is-full-width", 
+                                                        "I'm",
+                                                        " ",
+                                                        m.heroTitleName,
+                                                        ".",
+                                                        //   (0, A.jsx)("span", { children: m.heroDesignation }),
+                                                        (0, A.jsx)("span", {
+                                                            className: "header-caption",
+                                                            id: "page-top",
                                                             children: [
-                                                            //   (0, A.jsx)("span", { children: "a " }),
-                                                              (0, A.jsx)("span", { 
-                                                                className: "cd-words-wrapper", 
-                                                                children: [
-                                                                  (0, A.jsx)("b", { className: "is-visible", children: "Full Stack Developer." }),
-                                                                  (0, A.jsx)("b", { className: "is-hidden", children: "Professional Coder." }),
-                                                                //   (0, A.jsx)("b", { className: "is-hidden", children: "Full Stack Developer." })
-                                                                ]
-                                                              })
+                                                                (0, A.jsx)("span", {
+                                                                    className: "cd-headline clip is-full-width",
+                                                                    children: [
+                                                                        //   (0, A.jsx)("span", { children: "a " }),
+                                                                        (0, A.jsx)("span", {
+                                                                            className: "cd-words-wrapper",
+                                                                            children: [
+                                                                                (0, A.jsx)("b", { className: "is-visible", children: "Full Stack Developer." }),
+                                                                                (0, A.jsx)("b", { className: "is-hidden", children: "Professional Coder." }),
+                                                                                //   (0, A.jsx)("b", { className: "is-hidden", children: "Full Stack Developer." })
+                                                                            ]
+                                                                        })
+                                                                    ]
+                                                                })
                                                             ]
-                                                          })
-                                                        ]
-                                                      })
+                                                        })
                                                     ]
-                                                  }),                                                  
+                                                }),
                                                 (0, A.jsx)("p", { className: "open-sans-font", children: m.heroDescriptions }),
                                                 (0, A.jsxs)("button", {
                                                     className: "button",
@@ -674,12 +713,13 @@ emailjs.init({
                         image: c,
                         tag: ["insurance"],
                         delayAnimation: "0",
-                        modalDetails: [{ 
-                            project: "ABSLI LEAP", 
-                            client: "Aditya Birla", 
-                            language: "React, Node, Express, Mongo, HTML, CSS, Javascript", 
-                            preview: "www.leap.adityabirlasunlifeinsurance.com/", 
-                            link: "https://leap.adityabirlasunlifeinsurance.com/" }],
+                        modalDetails: [{
+                            project: "ABSLI LEAP",
+                            client: "Aditya Birla",
+                            language: "React, Node, Express, Mongo, HTML, CSS, Javascript",
+                            preview: "www.leap.adityabirlasunlifeinsurance.com/",
+                            link: "https://leap.adityabirlasunlifeinsurance.com/"
+                        }],
                     },
                     {
                         id: 2,
@@ -687,11 +727,12 @@ emailjs.init({
                         image: t,
                         tag: ["social-media"],
                         delayAnimation: "100",
-                        modalDetails: [{ 
-                            project: "ttoyou", 
-                            client: "ttoyou", 
-                            language: "Angular, Node, Express, Mongo, HTML, CSS, JS", 
-                            preview: "www.ttoyou.com", link: "https://ttoyou.com/landing" }],
+                        modalDetails: [{
+                            project: "ttoyou",
+                            client: "ttoyou",
+                            language: "Angular, Node, Express, Mongo, HTML, CSS, JS",
+                            preview: "www.ttoyou.com", link: "https://ttoyou.com/landing"
+                        }],
                     },
                     // {
                     //     id: 3,
@@ -810,74 +851,74 @@ emailjs.init({
                 r = a.n(n),
                 d = a(4275);
             let m = (e) => {
-                    let { modalId: s, setGetModal: a } = e;
-                    return (0, A.jsxs)("div", {
-                        className: "modal_portfolio ",
-                        children: [
-                            (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
-                            (0, A.jsx)("div", {}),
-                            (0, A.jsx)("div", {
-                                className: "modal__content",
-                                children: o
-                                    .filter((e) => e.id === s)
-                                    .map((e) =>
-                                        (0, A.jsxs)(
-                                            "div",
-                                            {
-                                                "data-aos": "fade",
-                                                children: [
-                                                    (0, A.jsx)("h2", { className: "heading mb-2", children: e.type }),
-                                                    (0, A.jsx)("div", {
-                                                        className: "modal__details",
-                                                        children: e.modalDetails.map((e, s) =>
-                                                            (0, A.jsxs)(
-                                                                "div",
-                                                                {
-                                                                    className: "row open-sans-font",
-                                                                    children: [
-                                                                        (0, A.jsxs)("div", {
-                                                                            className: "col-12 col-sm-6 mb-2",
-                                                                            children: [
-                                                                                (0, A.jsx)("i", { className: "fa fa-file-text-o pr-2" }),
-                                                                                "Project:",
-                                                                                " ",
-                                                                                (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.project }),
-                                                                            ],
-                                                                        }),
-                                                                        (0, A.jsxs)("div", {
-                                                                            className: "col-12 col-sm-6 mb-2",
-                                                                            children: [(0, A.jsx)("i", { className: "fa fa-user-o pr-2" }), "Client :", " ", (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.client })],
-                                                                        }),
-                                                                        (0, A.jsxs)("div", {
-                                                                            className: "col-12 col-sm-6 mb-2",
-                                                                            children: [(0, A.jsx)("i", { className: "fa fa-code pr-2" }), "Language :", " ", (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.language })],
-                                                                        }),
-                                                                        (0, A.jsxs)("div", {
-                                                                            className: "col-12 col-sm-6 mb-2",
-                                                                            children: [
-                                                                                (0, A.jsx)("i", { className: "fa fa-external-link pr-2" }),
-                                                                                "Preview :",
-                                                                                " ",
-                                                                                (0, A.jsx)("a", { className: "preview-link", target: "_blank", rel: "noopener noreferrer nofollow", href: e.link, children: e.preview }),
-                                                                            ],
-                                                                        }),
-                                                                    ],
-                                                                },
-                                                                s
-                                                            )
-                                                        ),
-                                                    }),
-                                                    (0, A.jsx)("figure", { className: "modal__img", children: (0, A.jsx)(r(), { src: e.image, alt: "portfolio project demo" }) }),
-                                                    (0, A.jsx)("button", { className: "close-modal", onClick: () => a(!1), children: (0, A.jsx)(r(), { src: d.Z, alt: "portfolio project demo" }) }),
-                                                ],
-                                            },
-                                            e.id
-                                        )
-                                    ),
-                            }),
-                        ],
-                    });
-                },
+                let { modalId: s, setGetModal: a } = e;
+                return (0, A.jsxs)("div", {
+                    className: "modal_portfolio ",
+                    children: [
+                        (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
+                        (0, A.jsx)("div", {}),
+                        (0, A.jsx)("div", {
+                            className: "modal__content",
+                            children: o
+                                .filter((e) => e.id === s)
+                                .map((e) =>
+                                    (0, A.jsxs)(
+                                        "div",
+                                        {
+                                            "data-aos": "fade",
+                                            children: [
+                                                (0, A.jsx)("h2", { className: "heading mb-2", children: e.type }),
+                                                (0, A.jsx)("div", {
+                                                    className: "modal__details",
+                                                    children: e.modalDetails.map((e, s) =>
+                                                        (0, A.jsxs)(
+                                                            "div",
+                                                            {
+                                                                className: "row open-sans-font",
+                                                                children: [
+                                                                    (0, A.jsxs)("div", {
+                                                                        className: "col-12 col-sm-6 mb-2",
+                                                                        children: [
+                                                                            (0, A.jsx)("i", { className: "fa fa-file-text-o pr-2" }),
+                                                                            "Project:",
+                                                                            " ",
+                                                                            (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.project }),
+                                                                        ],
+                                                                    }),
+                                                                    (0, A.jsxs)("div", {
+                                                                        className: "col-12 col-sm-6 mb-2",
+                                                                        children: [(0, A.jsx)("i", { className: "fa fa-user-o pr-2" }), "Client :", " ", (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.client })],
+                                                                    }),
+                                                                    (0, A.jsxs)("div", {
+                                                                        className: "col-12 col-sm-6 mb-2",
+                                                                        children: [(0, A.jsx)("i", { className: "fa fa-code pr-2" }), "Language :", " ", (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.language })],
+                                                                    }),
+                                                                    (0, A.jsxs)("div", {
+                                                                        className: "col-12 col-sm-6 mb-2",
+                                                                        children: [
+                                                                            (0, A.jsx)("i", { className: "fa fa-external-link pr-2" }),
+                                                                            "Preview :",
+                                                                            " ",
+                                                                            (0, A.jsx)("a", { className: "preview-link", target: "_blank", rel: "noopener noreferrer nofollow", href: e.link, children: e.preview }),
+                                                                        ],
+                                                                    }),
+                                                                ],
+                                                            },
+                                                            s
+                                                        )
+                                                    ),
+                                                }),
+                                                (0, A.jsx)("figure", { className: "modal__img", children: (0, A.jsx)(r(), { src: e.image, alt: "portfolio project demo" }) }),
+                                                (0, A.jsx)("button", { className: "close-modal", onClick: () => a(!1), children: (0, A.jsx)(r(), { src: d.Z, alt: "portfolio project demo" }) }),
+                                            ],
+                                        },
+                                        e.id
+                                    )
+                                ),
+                        }),
+                    ],
+                });
+            },
                 h = (e) => {
                     let { modalId: s, setGetModal: a } = e;
                     return (0, A.jsxs)("div", {
@@ -952,84 +993,84 @@ emailjs.init({
             var p = a(6066);
             a(1548), a(3873);
             let x = (e) => {
-                    let { modalId: s, setGetModal: a } = e,
-                        l = { dots: !0, infinite: !0, speed: 500, slidesToShow: 1, slidesToScroll: 1, draggable: !0 };
-                    return (0, A.jsxs)("div", {
-                        className: "modal_portfolio",
-                        children: [
-                            (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
-                            (0, A.jsx)("div", {
-                                className: "modal__content",
-                                children: o
-                                    .filter((e) => e.id === s)
-                                    .map((e) =>
-                                        (0, A.jsxs)(
-                                            "div",
-                                            {
-                                                "data-aos": "fade",
-                                                children: [
-                                                    (0, A.jsx)("h2", { className: "heading mb-2", children: e.type }),
-                                                    (0, A.jsx)("div", {
-                                                        className: "modal__details",
-                                                        children: e.modalDetails.map((e, s) =>
-                                                            (0, A.jsxs)(
-                                                                "div",
-                                                                {
-                                                                    className: "row open-sans-font",
-                                                                    children: [
-                                                                        (0, A.jsxs)("div", {
-                                                                            className: "col-12 col-sm-6 mb-2",
-                                                                            children: [
-                                                                                (0, A.jsx)("i", { className: "fa fa-file-text-o pr-2" }),
-                                                                                "Project:",
-                                                                                " ",
-                                                                                (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.project }),
-                                                                            ],
-                                                                        }),
-                                                                        (0, A.jsxs)("div", {
-                                                                            className: "col-12 col-sm-6 mb-2",
-                                                                            children: [(0, A.jsx)("i", { className: "fa fa-user-o pr-2" }), "Client :", " ", (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.client })],
-                                                                        }),
-                                                                        (0, A.jsxs)("div", {
-                                                                            className: "col-12 col-sm-6 mb-2",
-                                                                            children: [(0, A.jsx)("i", { className: "fa fa-code pr-2" }), "Language :", " ", (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.language })],
-                                                                        }),
-                                                                        (0, A.jsxs)("div", {
-                                                                            className: "col-12 col-sm-6 mb-2",
-                                                                            children: [
-                                                                                (0, A.jsx)("i", { className: "fa fa-external-link pr-2" }),
-                                                                                "Preview :",
-                                                                                " ",
-                                                                                (0, A.jsx)("a", { className: "preview-link", target: "_blank", rel: "noopener noreferrer nofollow", href: e.link, children: e.preview }),
-                                                                            ],
-                                                                        }),
-                                                                    ],
-                                                                },
-                                                                s
-                                                            )
-                                                        ),
+                let { modalId: s, setGetModal: a } = e,
+                    l = { dots: !0, infinite: !0, speed: 500, slidesToShow: 1, slidesToScroll: 1, draggable: !0 };
+                return (0, A.jsxs)("div", {
+                    className: "modal_portfolio",
+                    children: [
+                        (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
+                        (0, A.jsx)("div", {
+                            className: "modal__content",
+                            children: o
+                                .filter((e) => e.id === s)
+                                .map((e) =>
+                                    (0, A.jsxs)(
+                                        "div",
+                                        {
+                                            "data-aos": "fade",
+                                            children: [
+                                                (0, A.jsx)("h2", { className: "heading mb-2", children: e.type }),
+                                                (0, A.jsx)("div", {
+                                                    className: "modal__details",
+                                                    children: e.modalDetails.map((e, s) =>
+                                                        (0, A.jsxs)(
+                                                            "div",
+                                                            {
+                                                                className: "row open-sans-font",
+                                                                children: [
+                                                                    (0, A.jsxs)("div", {
+                                                                        className: "col-12 col-sm-6 mb-2",
+                                                                        children: [
+                                                                            (0, A.jsx)("i", { className: "fa fa-file-text-o pr-2" }),
+                                                                            "Project:",
+                                                                            " ",
+                                                                            (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.project }),
+                                                                        ],
+                                                                    }),
+                                                                    (0, A.jsxs)("div", {
+                                                                        className: "col-12 col-sm-6 mb-2",
+                                                                        children: [(0, A.jsx)("i", { className: "fa fa-user-o pr-2" }), "Client :", " ", (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.client })],
+                                                                    }),
+                                                                    (0, A.jsxs)("div", {
+                                                                        className: "col-12 col-sm-6 mb-2",
+                                                                        children: [(0, A.jsx)("i", { className: "fa fa-code pr-2" }), "Language :", " ", (0, A.jsx)("span", { className: "ft-wt-600 uppercase", children: e.language })],
+                                                                    }),
+                                                                    (0, A.jsxs)("div", {
+                                                                        className: "col-12 col-sm-6 mb-2",
+                                                                        children: [
+                                                                            (0, A.jsx)("i", { className: "fa fa-external-link pr-2" }),
+                                                                            "Preview :",
+                                                                            " ",
+                                                                            (0, A.jsx)("a", { className: "preview-link", target: "_blank", rel: "noopener noreferrer nofollow", href: e.link, children: e.preview }),
+                                                                        ],
+                                                                    }),
+                                                                ],
+                                                            },
+                                                            s
+                                                        )
+                                                    ),
+                                                }),
+                                                (0, A.jsx)("figure", {
+                                                    className: "modal__img",
+                                                    children: (0, A.jsxs)(p.Z, {
+                                                        ...l,
+                                                        children: [
+                                                            (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: e.image, alt: "portfolio project demo" }) }),
+                                                            (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: c, alt: "portfolio project demo" }) }),
+                                                            (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: t, alt: "portfolio project demo" }) }),
+                                                        ],
                                                     }),
-                                                    (0, A.jsx)("figure", {
-                                                        className: "modal__img",
-                                                        children: (0, A.jsxs)(p.Z, {
-                                                            ...l,
-                                                            children: [
-                                                                (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: e.image, alt: "portfolio project demo" }) }),
-                                                                (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: c, alt: "portfolio project demo" }) }),
-                                                                (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: t, alt: "portfolio project demo" }) }),
-                                                            ],
-                                                        }),
-                                                    }),
-                                                    (0, A.jsx)("button", { className: "close-modal", onClick: () => a(!1), children: (0, A.jsx)(r(), { src: d.Z, alt: "portfolio project demo" }) }),
-                                                ],
-                                            },
-                                            e.id
-                                        )
-                                    ),
-                            }),
-                        ],
-                    });
-                },
+                                                }),
+                                                (0, A.jsx)("button", { className: "close-modal", onClick: () => a(!1), children: (0, A.jsx)(r(), { src: d.Z, alt: "portfolio project demo" }) }),
+                                            ],
+                                        },
+                                        e.id
+                                    )
+                                ),
+                        }),
+                    ],
+                });
+            },
                 j = (e) => {
                     let { modalId: s, setGetModal: a } = e;
                     return (0, A.jsxs)("div", {
@@ -1657,25 +1698,26 @@ emailjs.init({
                         (0, A.jsxs)("div", {
                             className: "switch-handle",
                             children: [
-                                (0, A.jsx)("span", 
-                                    { 
-                                        className: "light-text", 
-                                        children: (0, A.jsx)(i(), { 
-                                            src: './public/img/sun.png', 
-                                            alt: "swicher", 
-                                            className: "filter_1", 
+                                (0, A.jsx)("span",
+                                    {
+                                        className: "light-text",
+                                        children: (0, A.jsx)(i(), {
+                                            src: './public/img/sun.png',
+                                            alt: "swicher",
+                                            className: "filter_1",
                                             priority: !0,
-                                            id:'sun-image',
+                                            id: 'sun-image',
                                             width: '30px'
-                                        }) 
+                                        })
                                     }),
-                                (0, A.jsx)("span", { 
-                                    className: "dark-text", 
-                                    children: (0, A.jsx)("i", 
-                                        { 
-                                            className: "fa-solid fa-moon", 
+                                (0, A.jsx)("span", {
+                                    className: "dark-text",
+                                    children: (0, A.jsx)("i",
+                                        {
+                                            className: "fa-solid fa-moon",
                                             "aria-hidden": "true",
-                                        }) }),
+                                        })
+                                }),
                             ],
                         }),
                     ],
