@@ -60,7 +60,7 @@
                                                             className: "container-fluid main-container container-home p-0 g-0",
                                                             "data-aos": "fade-up",
                                                             "data-aos-duration": "1200",
-                                                            children: [(0, t.jsx)("div", { className: "color-block d-none d-lg-block",id:"gradient" }), (0, t.jsx)(i.Z, {})],
+                                                            children: [(0, t.jsx)("div", { className: "color-block d-none d-lg-block"}), (0, t.jsx)(i.Z, {})],
                                                         }),
                                                     }),
                                                     (0, t.jsx)(c.x4, {

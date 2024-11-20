@@ -16199,7 +16199,7 @@ body.light .custom-modal.dark .box_inner.about {
 }
 
 body.light .home .bg {
-    box-shadow: none;
+    box-shadow: 0 0 7px rgb(255 255 255 / 90%);
 }
 
 .modal_portfolio {
