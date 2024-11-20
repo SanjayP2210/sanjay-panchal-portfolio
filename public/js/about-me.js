@@ -1512,17 +1512,17 @@ emailjs.init({
                                 className: "portfolio-main",
                                 children: (0, A.jsxs)(i.mQ, {
                                     children: [
-                                        (0, A.jsxs)(i.td, {
-                                            className: "portfolio-tab-list",
-                                            "data-aos": "fade-up",
-                                            children: [
-                                                (0, A.jsx)(i.OK, { children: "ALL" }),
-                                                (0, A.jsx)(i.OK, { children: "LOGO" }),
-                                                (0, A.jsx)(i.OK, { children: "VIDEO" }),
-                                                (0, A.jsx)(i.OK, { children: "GRAPHIC DESIGN" }),
-                                                (0, A.jsx)(i.OK, { children: "MOCKUP" }),
-                                            ],
-                                        }),
+                                        // (0, A.jsxs)(i.td, {
+                                        //     className: "portfolio-tab-list",
+                                        //     "data-aos": "fade-up",
+                                        //     children: [
+                                        //         (0, A.jsx)(i.OK, { children: "ALL" }),
+                                        //         (0, A.jsx)(i.OK, { children: "LOGO" }),
+                                        //         (0, A.jsx)(i.OK, { children: "VIDEO" }),
+                                        //         (0, A.jsx)(i.OK, { children: "GRAPHIC DESIGN" }),
+                                        //         (0, A.jsx)(i.OK, { children: "MOCKUP" }),
+                                        //     ],
+                                        // }),
                                         (0, A.jsxs)("div", {
                                             className: "container",
                                             children: [
