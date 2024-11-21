@@ -19854,3 +19854,11 @@ xclip
     left: 0;
     z-index: -1; /* Ensure it sits behind all other content */
 }
+
+.social_icon li a:hover {
+  background: var(--main-primary-color);
+  color: #fff;
+  transform: rotate(360deg);
+  transition: ease-in all 3.7s;
+}
+

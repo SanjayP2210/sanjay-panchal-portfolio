@@ -27,7 +27,18 @@ emailjs.init({
                     children: [
                         (0, A.jsxs)("p", {
                             className: "open-sans-font custom-span-contact position-relative",
-                            children: [(0, A.jsx)("i", { className: "fa fa-map position-absolute" }), (0, A.jsx)("span", { className: "d-block", children: "Address Point" }), "24, Shanti nagar society, Chandlodiya, Ahmedabad - 382481."],
+                            children: 
+                            [
+                                (0, A.jsx)("a", { 
+                                    href: 'https://maps.app.goo.gl/vQDuRyBK1LnBUipB6',
+                                    target:'_blank',
+                                    rel: "noreferrer", 
+                                    children: [
+                                        (0, A.jsx)("i", { className: "fa fa-map position-absolute" }),
+                                        (0, A.jsx)("span", { className: "d-block", children: "Address Point" }), "24, Shanti nagar society, Chandlodiya, Ahmedabad - 382481."
+                                    ]}
+                                ), 
+                            ],
                         }),
                         (0, A.jsxs)("p", {
                             className: "open-sans-font custom-span-contact position-relative",
@@ -145,14 +156,14 @@ emailjs.init({
             var A = a(5893);
             a(7294);
             let l = [
-                { iconName: "fa fa-facebook", link: "https://www.facebook.com/" },
-                { iconName: "fa fa-instagram", link: "https://instagram.com/" },
+                { iconName: "fa fa-facebook", link: "https://www.facebook.com/sanjayp14594" },
+                { iconName: "fa fa-instagram", link: "https://www.instagram.com/er._sanju/" },
                 { iconName: "fa fa-linkedin", link: "https://www.linkedin.com/in/sanjayp1994" },
-                // { iconName: "fa fa-dribbble", link: "https://dribbble.com/" },
+                { iconName: "fa fa-whatsapp", link: "https://api.whatsapp.com/send?phone=%2B+9199722224602&text=hi" },
             ],
                 i = () =>
                     (0, A.jsx)("ul", {
-                        className: "social list-unstyled pt-1 mb-5",
+                        className: "social social_icon list-unstyled pt-1 mb-5",
                         children: l.map((e, s) => (0, A.jsx)("li", { children: (0, A.jsx)("a", { href: e.link, target: "_blank", rel: "noreferrer", children: (0, A.jsx)("i", { className: e.iconName }) }) }, s)),
                     });
             s.Z = i;
