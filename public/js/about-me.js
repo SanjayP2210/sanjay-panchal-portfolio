@@ -10,7 +10,7 @@ emailjs.init({
         },
         6029: function (e, s) {
             s.Z = {
-                src: "/public/img/hero/mobile-banner.png",
+                src: "./public/img/hero/mobile-banner.png",
                 height: 300,
                 width: 300,
                 blurDataURL:
@@ -27,18 +27,19 @@ emailjs.init({
                     children: [
                         (0, A.jsxs)("p", {
                             className: "open-sans-font custom-span-contact position-relative",
-                            children: 
-                            [
-                                (0, A.jsx)("a", { 
-                                    href: 'https://maps.app.goo.gl/vQDuRyBK1LnBUipB6',
-                                    target:'_blank',
-                                    rel: "noreferrer", 
-                                    children: [
-                                        (0, A.jsx)("i", { className: "fa fa-map position-absolute" }),
-                                        (0, A.jsx)("span", { className: "d-block", children: "Address Point" }), "24, Shanti nagar society, Chandlodiya, Ahmedabad - 382481."
-                                    ]}
-                                ), 
-                            ],
+                            children:
+                                [
+                                    (0, A.jsx)("a", {
+                                        href: 'https://maps.app.goo.gl/vQDuRyBK1LnBUipB6',
+                                        target: '_blank',
+                                        rel: "noreferrer",
+                                        children: [
+                                            (0, A.jsx)("i", { className: "fa fa-map position-absolute" }),
+                                            (0, A.jsx)("span", { className: "d-block", children: "Address Point" }), "24, Shanti nagar society, Chandlodiya, Ahmedabad - 382481."
+                                        ]
+                                    }
+                                    ),
+                                ],
                         }),
                         (0, A.jsxs)("p", {
                             className: "open-sans-font custom-span-contact position-relative",
@@ -207,7 +208,7 @@ emailjs.init({
                                 "li",
                                 {
                                     children: [
-                                        (0, A.jsx)("div", { className: "icon", children: (0, A.jsx)("i", { className: "fa fa-briefcase" }) }),
+                                        (0, A.jsx)("div", { className: "icon", children: (0, A.jsx)("i", { className: "fa fa-book" }) }),
                                         (0, A.jsx)("span", { className: "time open-sans-font text-uppercase", children: e.year }),
                                         (0, A.jsxs)("h5", { className: "poppins-font text-uppercase", children: [e.position, (0, A.jsx)("span", { className: "place open-sans-font", children: e.compnayName })] }),
                                         (0, A.jsx)("p", { className: "open-sans-font", children: e.details }),
@@ -234,12 +235,12 @@ emailjs.init({
                 ],
                 getEducationRightList = () =>
                     (0, A.jsx)("ul", {
-                        children: educationList.slice(0,2).map((e, s) =>
+                        children: educationList.slice(0, 2).map((e, s) =>
                             (0, A.jsxs)(
                                 "li",
                                 {
                                     children: [
-                                        (0, A.jsx)("div", { className: "icon", children: (0, A.jsx)("i", { className: "fa fa-briefcase" }) }),
+                                        (0, A.jsx)("div", { className: "icon", children: (0, A.jsx)("i", { className: "fa fa-book" }) }),
                                         (0, A.jsx)("span", { className: "time open-sans-font text-uppercase", children: e.year }),
                                         (0, A.jsxs)("h5", { className: "poppins-font text-uppercase", children: [e.position, (0, A.jsx)("span", { className: "place open-sans-font", children: e.colleageName })] }),
                                         (0, A.jsx)("p", { className: "open-sans-font", children: e.details }),
@@ -256,7 +257,7 @@ emailjs.init({
                                 "li",
                                 {
                                     children: [
-                                        (0, A.jsx)("div", { className: "icon", children: (0, A.jsx)("i", { className: "fa fa-briefcase" }) }),
+                                        (0, A.jsx)("div", { className: "icon", children: (0, A.jsx)("i", { className: "fa fa-book" }) }),
                                         (0, A.jsx)("span", { className: "time open-sans-font text-uppercase", children: e.year }),
                                         (0, A.jsxs)("h5", { className: "poppins-font text-uppercase", children: [e.position, (0, A.jsx)("span", { className: "place open-sans-font", children: e.colleageName })] }),
                                         (0, A.jsx)("p", { className: "open-sans-font", children: e.details }),
@@ -361,28 +362,70 @@ emailjs.init({
                     { skillClass: "p60", skillPercent: "60", skillName: "JQUERY" },
                     { skillClass: "p40", skillPercent: "40", skillName: "AWS" },
                 ],
-                h = () =>
-                    (0, A.jsx)(A.Fragment, {
-                        children: m.map((e, s) =>
-                            (0, A.jsxs)(
-                                "div",
-                                {
-                                    className: "col-6 col-md-3 mb-3 mb-sm-5",
-                                    children: [
-                                        (0, A.jsxs)("div", {
-                                            className: "c100 ".concat(e.skillClass),
-                                            children: [
-                                                (0, A.jsxs)("span", { children: [e.skillPercent, "%"] }),
-                                                (0, A.jsxs)("div", { className: "slice", children: [(0, A.jsx)("div", { className: "bar" }), (0, A.jsx)("div", { className: "fill" })] }),
-                                            ],
-                                        }),
-                                        (0, A.jsx)("h6", { className: "text-uppercase open-sans-font text-center mt-2 mt-sm-4", children: e.skillName }),
-                                    ],
-                                },
-                                s
-                            )
-                        ),
-                    });
+                // h = () =>
+                //     (0, A.jsx)(A.Fragment, {
+                //         children: m.map((e, s) =>
+                //             (0, A.jsxs)(
+                //                 "div",
+                //                 {
+                //                     className: "col-6 col-md-3 mb-3 mb-sm-5",
+                //                     children: [
+                //                         (0, A.jsxs)("div", {
+                //                             className: "c100 ".concat(e.skillClass),
+                //                             children: [
+                //                                 (0, A.jsxs)("span", { children: [e.skillPercent, "%"] }),
+                //                                 (0, A.jsxs)("div", { className: "slice", children: [(0, A.jsx)("div", { className: "bar-div" }), (0, A.jsx)("div", { className: "fill-div" })] }),
+                //                             ],
+                //                         }),
+                //                         (0, A.jsx)("h6", { className: "text-uppercase open-sans-font text-center mt-2 mt-sm-4", children: e.skillName }),
+                //                     ],
+                //                 },
+                //                 s
+                //             )
+                //         ),
+                //     }),
+                percentageView = () =>
+                        (0, A.jsx)(A.Fragment, {
+                            children: m.map((e, s) =>
+                                (0, A.jsxs)(
+                                    "div",
+                                    {
+                                        className: "col-6 col-md-3 mb-3 mb-sm-5 percentage-bar",
+                                        children: [
+                                            (0, A.jsxs)("div", {
+                                                className: "single-chart ",
+                                                children: [
+                                                    (0, A.jsxs)("svg", { 
+                                                        className: "c100 p60 circular-chart orange", 
+                                                        viewBox:"0 0 36 36",
+                                                        children: [
+                                                            (0, A.jsx)
+                                                            ("path", 
+                                                                { className: "circle-bg" ,
+                                                                    d:"M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" 
+                                                                }),
+                                                                (0, A.jsx)
+                                                            ("path", 
+                                                                { className: "percentag-circle" ,
+                                                                    strokeDasharray:`${e.skillPercent}, 100`,
+                                                                    d:"M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" 
+                                                                }),
+                                                            ] 
+                                                            }),
+                                                    (0, A.jsxs)("text", {
+                                                        x:"18" ,
+                                                        y:"20.35", 
+                                                        class:"percentage",
+                                                        children: [e.skillPercent, "%"] }),
+                                                ],
+                                            }),
+                                            (0, A.jsx)("h6", { className: "text-uppercase open-sans-font text-center mt-2 mt-sm-4", children: e.skillName }),
+                                        ],
+                                    },
+                                    s
+                                )
+                            ),
+                        })
             var p = a(6029),
                 x = a(5675),
                 j = a.n(x);
@@ -423,8 +466,9 @@ emailjs.init({
                             (0, A.jsxs)("div", {
                                 className: "row",
                                 children: [
-                                    (0, A.jsx)("div", { className: "col-12", children: (0, A.jsx)("h3", { className: "text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-start text-sm-center custom-title ft-wt-600", children: "My Skills" }) }),
-                                    (0, A.jsx)(h, {}),
+                                    (0, A.jsx)("div", { className: "col-12", children: (0, A.jsx)("h3", { className: "text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-start text-sm-center custom-title ft-wt-600 my-skills", children: "My Skills" }) }),
+                                    // (0, A.jsx)(h, {}),
+                                    (0, A.jsx)(percentageView, {}),
                                 ],
                             }),
                             (0, A.jsx)("hr", { className: "separator mt-1" }),
@@ -623,7 +667,6 @@ emailjs.init({
                                                         "I'm",
                                                         " ",
                                                         m.heroTitleName,
-                                                        ".",
                                                         //   (0, A.jsx)("span", { children: m.heroDesignation }),
                                                         (0, A.jsx)("span", {
                                                             className: "header-caption",
@@ -699,29 +742,19 @@ emailjs.init({
             var A = a(5893),
                 l = a(7294),
                 i = a(776),
-                c = {
-                    src: "public/media/absli-image.svg",
-                    height: 552,
-                    width: 895,
-                    blurDataURL:
-                        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAAoAf/xAAaEAACAgMAAAAAAAAAAAAAAAABEQIhAAQi/9oACAEBAAE/AN9iMDBDu6bGf//EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oACAECAQE/AK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAwEBPwCP/9k=",
-                    blurWidth: 8,
-                    blurHeight: 5,
-                },
-                t = {
-                    src: "public/media/ttoyou-image.png",
-                    height: 552,
-                    width: 895,
-                    blurDataURL:
-                        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAAAowh//8QAGRABAAIDAAAAAAAAAAAAAAAAAgMFABES/9oACAEBAAE/AKm1msoGmCONZ//EABgRAQADAQAAAAAAAAAAAAAAAAEAAgMx/9oACAECAQE/AMVtlRepP//EABcRAQADAAAAAAAAAAAAAAAAAAIAAyH/2gAIAQMBAT8Asxqf/9k=",
-                    blurWidth: 8,
-                    blurHeight: 5,
-                },
-                o = [
+                projectList = [
                     {
                         id: 1,
-                        type: "ABSLI Project",
-                        image: c,
+                        type: "ABSLI",
+                        image: {
+                            src: "public/media/absli-image.png",
+                            height: 552,
+                            width: 895,
+                            blurDataURL:
+                                "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAAoAf/xAAaEAACAgMAAAAAAAAAAAAAAAABEQIhAAQi/9oACAEBAAE/AN9iMDBDu6bGf//EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oACAECAQE/AK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAwEBPwCP/9k=",
+                            blurWidth: 8,
+                            blurHeight: 5,
+                        },
                         tag: ["insurance"],
                         delayAnimation: "0",
                         modalDetails: [{
@@ -734,9 +767,17 @@ emailjs.init({
                     },
                     {
                         id: 2,
-                        type: "ttoyou project",
-                        image: t,
-                        tag: ["social-media"],
+                        type: "ttoyou",
+                        image: {
+                            src: "public/media/ttoyou-image.png",
+                            height: 552,
+                            width: 895,
+                            blurDataURL:
+                                "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAAAowh//8QAGRABAAIDAAAAAAAAAAAAAAAAAgMFABES/9oACAEBAAE/AKm1msoGmCONZ//EABgRAQADAQAAAAAAAAAAAAAAAAEAAgMx/9oACAECAQE/AMVtlRepP//EABcRAQADAAAAAAAAAAAAAAAAAAIAAyH/2gAIAQMBAT8Asxqf/9k=",
+                            blurWidth: 8,
+                            blurHeight: 5,
+                        },
+                        tag: ["social"],
                         delayAnimation: "100",
                         modalDetails: [{
                             project: "ttoyou",
@@ -745,70 +786,94 @@ emailjs.init({
                             preview: "www.ttoyou.com", link: "https://ttoyou.com/landing"
                         }],
                     },
-                    // {
-                    //     id: 3,
-                    //     type: "slider project",
-                    //     image: {
-                    //         src: "public/media/project-3.jpg",
-                    //         height: 552,
-                    //         width: 895,
-                    //         blurDataURL:
-                    //             "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAAuAH/xAAZEAADAAMAAAAAAAAAAAAAAAABAgMAEUH/2gAIAQEAAT8AirBqbYnuf//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQIBAT8Af//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQMBAT8Af//Z",
-                    //         blurWidth: 8,
-                    //         blurHeight: 5,
-                    //     },
-                    //     tag: [],
-                    //     delayAnimation: "200",
-                    //     modalDetails: [{ project: "Website", client: "Themeforest", language: " HTML, CSS, Javascript", preview: "www.envato.com", link: "https://www.envato.com" }],
-                    // },
-                    // {
-                    //     id: 4,
-                    //     type: "local project",
-                    //     image: {
-                    //         src: "public/media/project-4.jpg",
-                    //         height: 552,
-                    //         width: 895,
-                    //         blurDataURL:
-                    //             "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABgEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAALMS/wD/xAAZEAADAQEBAAAAAAAAAAAAAAABAgMRADH/2gAIAQEAAT8AipelmdvKEADczO//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwCP/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAIAQMBAT8Ar//Z",
-                    //         blurWidth: 8,
-                    //         blurHeight: 5,
-                    //     },
-                    //     tag: ["logo", "video"],
-                    //     delayAnimation: "0",
-                    //     modalDetails: [{ project: "video", client: "Videohive", language: " Adobe After Effects", preview: "www.videohive.net", link: "https://www.videohive.net" }],
-                    // },
-                    // {
-                    //     id: 5,
-                    //     type: "saas project",
-                    //     image: {
-                    //         src: "public/media/project-5.jpg",
-                    //         height: 552,
-                    //         width: 895,
-                    //         blurDataURL:
-                    //             "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABgEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAAKgWH//EABkQAAEFAAAAAAAAAAAAAAAAAAABAgUhIv/aAAgBAQABPwCScu7P/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAgBAgEBPwB//8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAgBAwEBPwB//9k=",
-                    //         blurWidth: 8,
-                    //         blurHeight: 5,
-                    //     },
-                    //     tag: ["logo"],
-                    //     delayAnimation: "100",
-                    //     modalDetails: [{ project: "Web Application", client: "Themeforest", language: "HTML, CSS, ReactJS", preview: "www.envato.com", link: "https://themeforest.net/item/deski-saas-software-react-template/33799794" }],
-                    // },
-                    // {
-                    //     id: 6,
-                    //     type: "mockup project",
-                    //     image: {
-                    //         src: "public/media/project-6.jpg",
-                    //         height: 552,
-                    //         width: 895,
-                    //         blurDataURL:
-                    //             "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABgEBAQAAAAAAAAAAAAAAAAAAAQT/2gAMAwEAAhADEAAAALsMn//EABYQAAMAAAAAAAAAAAAAAAAAAAADMv/aAAgBAQABPwBcn//EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oACAECAQE/AI//xAAWEQEBAQAAAAAAAAAAAAAAAAABAAL/2gAIAQMBAT8AdN//2Q==",
-                    //         blurWidth: 8,
-                    //         blurHeight: 5,
-                    //     },
-                    //     tag: ["logo", "mockup"],
-                    //     delayAnimation: "200",
-                    //     modalDetails: [{ project: "Website", client: "Themeforest", language: "HTML, CSS, Javascript", preview: "www.pexels.com", link: "https://www.pexels.com" }],
-                    // },
+                    {
+                        id: 3,
+                        type: "My Products",
+                        image: {
+                            src: "public/media/my-product-image.png",
+                            height: 552,
+                            width: 895,
+                            blurDataURL:
+                                "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAAuAH/xAAZEAADAAMAAAAAAAAAAAAAAAABAgMAEUH/2gAIAQEAAT8AirBqbYnuf//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQIBAT8Af//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQMBAT8Af//Z",
+                            blurWidth: 8,
+                            blurHeight: 5,
+                        },
+                        tag: ['eccomerce'],
+                        delayAnimation: "200",
+                        modalDetails: [{
+                            project: "My Products",
+                            client: "Sanjay Panchal",
+                            language: "React, Node, Express, Mongo, HTML, CSS, Javascript",
+                            preview: "https://my-products-site-app.vercel.app/",
+                            link: "https://my-products-site-app.vercel.app/"
+                        }],
+                    },
+                    {
+                        id: 4,
+                        type: "Mahakali Furniture",
+                        image: {
+                            src: "public/media/mahakali-furniture-image.png",
+                            height: 552,
+                            width: 895,
+                            blurDataURL:
+                                "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABgEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAALMS/wD/xAAZEAADAQEBAAAAAAAAAAAAAAABAgMRADH/2gAIAQEAAT8AipelmdvKEADczO//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwCP/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAIAQMBAT8Ar//Z",
+                            blurWidth: 8,
+                            blurHeight: 5,
+                        },
+                        tag: ["furniture"],
+                        delayAnimation: "0",
+                        modalDetails: [{
+                            project: "Mahakali Furniture",
+                            client: "Kalpesh Poraniya",
+                            language: "HTML, CSS, Javascript",
+                            preview: "https://mahakali-furniture.netlify.app/",
+                            link: "https://mahakali-furniture.netlify.app/"
+                        }],
+                    },
+                    {
+                        id: 5,
+                        type: "Insurance House",
+                        image: {
+                            src: "public/media/insurance-house-image.png",
+                            height: 552,
+                            width: 895,
+                            blurDataURL:
+                                "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABgEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAAKgWH//EABkQAAEFAAAAAAAAAAAAAAAAAAABAgUhIv/aAAgBAQABPwCScu7P/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAgBAgEBPwB//8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAgBAwEBPwB//9k=",
+                            blurWidth: 8,
+                            blurHeight: 5,
+                        },
+                        tag: ["insurance"],
+                        delayAnimation: "100",
+                        modalDetails: [{
+                            project: "Insurance House",
+                            client: "Insurance House",
+                            language: "Angular, HTML, CSS, Javascript, Jquery, AJAX",
+                            preview: "https://www.insurancehouse.in/#/home",
+                            link: "https://www.insurancehouse.in/#/home"
+                        }],
+                    },
+                    {
+                        id: 6,
+                        type: "Bill Generator",
+                        image: {
+                            src: "public/media/bill-generator-image.png",
+                            height: 552,
+                            width: 895,
+                            blurDataURL:
+                                "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABgEBAQAAAAAAAAAAAAAAAAAAAQT/2gAMAwEAAhADEAAAALsMn//EABYQAAMAAAAAAAAAAAAAAAAAAAADMv/aAAgBAQABPwBcn//EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oACAECAQE/AI//xAAWEQEBAQAAAAAAAAAAAAAAAAABAAL/2gAIAQMBAT8AdN//2Q==",
+                            blurWidth: 8,
+                            blurHeight: 5,
+                        },
+                        tag: ["billing"],
+                        delayAnimation: "200",
+                        modalDetails: [{
+                            project: "Bill Generator",
+                            client: "Sanjay Panchal",
+                            language: "React, Node, Mongo, Express, HTML, CSS, Javascript",
+                            preview: "www.bill-generation.vercel.app",
+                            link: "https://bill-generation.vercel.app/"
+                        }],
+                    },
                     // {
                     //     id: 7,
                     //     type: "facebook project",
@@ -861,7 +926,7 @@ emailjs.init({
                 n = a(5675),
                 r = a.n(n),
                 d = a(4275);
-            let m = (e) => {
+            let singleImagePopup = (e) => {
                 let { modalId: s, setGetModal: a } = e;
                 return (0, A.jsxs)("div", {
                     className: "modal_portfolio ",
@@ -870,7 +935,7 @@ emailjs.init({
                         (0, A.jsx)("div", {}),
                         (0, A.jsx)("div", {
                             className: "modal__content",
-                            children: o
+                            children: projectList
                                 .filter((e) => e.id === s)
                                 .map((e) =>
                                     (0, A.jsxs)(
@@ -930,7 +995,7 @@ emailjs.init({
                     ],
                 });
             },
-                h = (e) => {
+                videocontainer = (e) => {
                     let { modalId: s, setGetModal: a } = e;
                     return (0, A.jsxs)("div", {
                         className: "modal_portfolio",
@@ -938,7 +1003,7 @@ emailjs.init({
                             (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
                             (0, A.jsx)("div", {
                                 className: "modal__content",
-                                children: o
+                                children: projectList
                                     .filter((e) => e.id === s)
                                     .map((e) =>
                                         (0, A.jsxs)(
@@ -1012,7 +1077,7 @@ emailjs.init({
                         (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
                         (0, A.jsx)("div", {
                             className: "modal__content",
-                            children: o
+                            children: projectList
                                 .filter((e) => e.id === s)
                                 .map((e) =>
                                     (0, A.jsxs)(
@@ -1067,8 +1132,8 @@ emailjs.init({
                                                         ...l,
                                                         children: [
                                                             (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: e.image, alt: "portfolio project demo" }) }),
-                                                            (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: c, alt: "portfolio project demo" }) }),
-                                                            (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: t, alt: "portfolio project demo" }) }),
+                                                            (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: projectList[0], alt: "portfolio project demo" }) }),
+                                                            (0, A.jsx)("div", { children: (0, A.jsx)(r(), { src: projectList[1], alt: "portfolio project demo" }) }),
                                                         ],
                                                     }),
                                                 }),
@@ -1090,7 +1155,7 @@ emailjs.init({
                             (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
                             (0, A.jsx)("div", {
                                 className: "modal__content",
-                                children: o
+                                children: projectList
                                     .filter((e) => e.id === s)
                                     .map((e) =>
                                         (0, A.jsxs)(
@@ -1167,7 +1232,7 @@ emailjs.init({
                             (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
                             (0, A.jsx)("div", {
                                 className: "modal__content",
-                                children: o
+                                children: projectList
                                     .filter((e) => e.id === s)
                                     .map((e) =>
                                         (0, A.jsxs)(
@@ -1235,7 +1300,7 @@ emailjs.init({
                             (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
                             (0, A.jsx)("div", {
                                 className: "modal__content",
-                                children: o
+                                children: projectList
                                     .filter((e) => e.id === s)
                                     .map((e) =>
                                         (0, A.jsxs)(
@@ -1303,7 +1368,7 @@ emailjs.init({
                             (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
                             (0, A.jsx)("div", {
                                 className: "modal__content",
-                                children: o
+                                children: projectList
                                     .filter((e) => e.id === s)
                                     .map((e) =>
                                         (0, A.jsxs)(
@@ -1371,7 +1436,7 @@ emailjs.init({
                             (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
                             (0, A.jsx)("div", {
                                 className: "modal__content",
-                                children: o
+                                children: projectList
                                     .filter((e) => e.id === s)
                                     .map((e) =>
                                         (0, A.jsxs)(
@@ -1439,7 +1504,7 @@ emailjs.init({
                             (0, A.jsx)("div", { className: "modal__outside", onClick: () => a(!1) }),
                             (0, A.jsx)("div", {
                                 className: "modal__content",
-                                children: o
+                                children: projectList
                                     .filter((e) => e.id === s)
                                     .map((e) =>
                                         (0, A.jsxs)(
@@ -1499,10 +1564,10 @@ emailjs.init({
                         ],
                     });
                 },
-                b = (e) => {
+                defineLayoutOfProjectList = (e) => {
                     let { modalId: s, setGetModal: a } = e;
-                    if (1 === s) return (0, A.jsx)(m, { modalId: s, setGetModal: a });
-                    if (2 === s) return (0, A.jsx)(m, { modalId: s, setGetModal: a });
+                    if (1 === s) return (0, A.jsx)(singleImagePopup, { modalId: s, setGetModal: a });
+                    if (2 === s) return (0, A.jsx)(singleImagePopup, { modalId: s, setGetModal: a });
                     if (3 === s) return (0, A.jsx)(x, { modalId: s, setGetModal: a });
                     if (4 === s) return (0, A.jsx)(j, { modalId: s, setGetModal: a });
                     if (5 === s) return (0, A.jsx)(g, { modalId: s, setGetModal: a });
@@ -1523,24 +1588,25 @@ emailjs.init({
                                 className: "portfolio-main",
                                 children: (0, A.jsxs)(i.mQ, {
                                     children: [
-                                        // (0, A.jsxs)(i.td, {
-                                        //     className: "portfolio-tab-list",
-                                        //     "data-aos": "fade-up",
-                                        //     children: [
-                                        //         (0, A.jsx)(i.OK, { children: "ALL" }),
-                                        //         (0, A.jsx)(i.OK, { children: "LOGO" }),
-                                        //         (0, A.jsx)(i.OK, { children: "VIDEO" }),
-                                        //         (0, A.jsx)(i.OK, { children: "GRAPHIC DESIGN" }),
-                                        //         (0, A.jsx)(i.OK, { children: "MOCKUP" }),
-                                        //     ],
-                                        // }),
+                                        (0, A.jsxs)(i.td, {
+                                            className: "portfolio-tab-list",
+                                            "data-aos": "fade-up",
+                                            children: [
+                                                (0, A.jsx)(i.OK, { children: "ALL" }),
+                                                (0, A.jsx)(i.OK, { children: "SOCIAL MEDIA" }),
+                                                (0, A.jsx)(i.OK, { children: "INSURANCE" }),
+                                                (0, A.jsx)(i.OK, { children: "FURNITURE" }),
+                                                (0, A.jsx)(i.OK, { children: "ECCOMERCE" }),
+                                                (0, A.jsx)(i.OK, { children: "BILLING" }),
+                                            ],
+                                        }),
                                         (0, A.jsxs)("div", {
                                             className: "container",
                                             children: [
                                                 (0, A.jsx)(i.x4, {
                                                     children: (0, A.jsx)("div", {
                                                         className: "tab-container",
-                                                        children: o.map((e) => {
+                                                        children: projectList.map((e) => {
                                                             let { id: s, type: a, image: l, delayAnimation: i } = e;
                                                             return (0, A.jsx)(
                                                                 "div",
@@ -1561,8 +1627,8 @@ emailjs.init({
                                                 (0, A.jsx)(i.x4, {
                                                     children: (0, A.jsx)("div", {
                                                         className: "tab-container",
-                                                        children: o
-                                                            .filter((e) => e.tag.includes("logo"))
+                                                        children: projectList
+                                                            .filter((e) => e.tag.includes("social"))
                                                             .map((e) => {
                                                                 let { id: s, type: a, image: l, delayAnimation: i } = e;
                                                                 return (0, A.jsx)(
@@ -1587,8 +1653,8 @@ emailjs.init({
                                                 (0, A.jsx)(i.x4, {
                                                     children: (0, A.jsx)("div", {
                                                         className: "tab-container",
-                                                        children: o
-                                                            .filter((e) => e.tag.includes("video"))
+                                                        children: projectList
+                                                            .filter((e) => e.tag.includes("insurance"))
                                                             .map((e) => {
                                                                 let { id: s, type: a, image: l, delayAnimation: i } = e;
                                                                 return (0, A.jsx)(
@@ -1613,8 +1679,8 @@ emailjs.init({
                                                 (0, A.jsx)(i.x4, {
                                                     children: (0, A.jsx)("div", {
                                                         className: "tab-container",
-                                                        children: o
-                                                            .filter((e) => e.tag.includes("graphic design"))
+                                                        children: projectList
+                                                            .filter((e) => e.tag.includes("furniture"))
                                                             .map((e) => {
                                                                 let { id: s, type: a, image: l, delayAnimation: i } = e;
                                                                 return (0, A.jsx)(
@@ -1639,8 +1705,34 @@ emailjs.init({
                                                 (0, A.jsx)(i.x4, {
                                                     children: (0, A.jsx)("div", {
                                                         className: "tab-container",
-                                                        children: o
-                                                            .filter((e) => e.tag.includes("mockup"))
+                                                        children: projectList
+                                                            .filter((e) => e.tag.includes("eccomerce"))
+                                                            .map((e) => {
+                                                                let { id: s, type: a, image: l, delayAnimation: i } = e;
+                                                                return (0, A.jsx)(
+                                                                    "div",
+                                                                    {
+                                                                        "data-aos": "fade-right",
+                                                                        "data-aos-delay": i,
+                                                                        children: (0, A.jsxs)("div", {
+                                                                            className: "tab-content",
+                                                                            onClick: () => t(s),
+                                                                            children: [
+                                                                                (0, A.jsx)(r(), { src: l, alt: "portfolio project demo" }),
+                                                                                (0, A.jsx)("h3", { children: (0, A.jsx)("span", { className: "conent-title", children: a }) }),
+                                                                            ],
+                                                                        }),
+                                                                    },
+                                                                    s
+                                                                );
+                                                            }),
+                                                    }),
+                                                }),
+                                                (0, A.jsx)(i.x4, {
+                                                    children: (0, A.jsx)("div", {
+                                                        className: "tab-container",
+                                                        children: projectList
+                                                            .filter((e) => e.tag.includes("billing"))
                                                             .map((e) => {
                                                                 let { id: s, type: a, image: l, delayAnimation: i } = e;
                                                                 return (0, A.jsx)(
@@ -1667,7 +1759,7 @@ emailjs.init({
                                     ],
                                 }),
                             }),
-                            e && (0, A.jsx)(b, { modalId: a, setGetModal: s }),
+                            e && (0, A.jsx)(defineLayoutOfProjectList, { modalId: a, setGetModal: s }),
                             " ",
                         ],
                     });
@@ -1703,7 +1795,7 @@ emailjs.init({
                         e ? (o(!0), s(!1)) : (o(!1), s(!0));
                     };
                 return (0, A.jsxs)("label", {
-                    className: "theme-switcher-label d-flex  ".concat(e ? "active" : ""),
+                    className: "theme-switcher-label d-flex d-none".concat(e ? "active" : ""),
                     children: [
                         (0, A.jsx)("input", { type: "checkbox", onClick: a, className: "theme-switcher" }),
                         (0, A.jsxs)("div", {

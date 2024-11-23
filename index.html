@@ -37,8 +37,8 @@
         <canvas class="particles-js-canvas-el">
         </canvas>
     </div>
-    <div class="cursor-dot-outline"></div>
-    <div class="cursor-dot"></div>
+    <!-- <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div> -->
     </div>
     <div id="__next">
         <div class="yellow">
@@ -179,52 +179,6 @@
         cursor.init();
 
 
-        // const imgInterval = setInterval(() => {
-        //     const image = document.getElementById('sun-image');
-        //     if (image && image?.hasAttribute('srcset')) {
-        //         image.removeAttribute('srcset');
-        //         console.log('srcset attribute removed');
-        //         image.src = '/public/img/sun.png';
-        //     } else {
-        //         // clearInterval(imgInterval);
-        //     }
-
-        // }, 1000);
-
-        // const mobileImgInterval = setInterval(() => {
-        //     const image = document.querySelector('.mobile-device-logo');
-        //     if (image && image?.hasAttribute('srcset')) {
-        //         image.removeAttribute('srcset');
-        //         console.log('srcset attribute removed');
-        //         image.src = './img/hero/mobile-banner.png';
-        //         // clearInterval(mobileImgInterval);
-        //     }
-
-        // }, 1000);
-
-        // const aboutImgInterval = setInterval(() => {
-        //     const image = document.querySelector('.about-logo');
-        //     if (image && image?.hasAttribute('srcset')) {
-        //         image.removeAttribute('srcset');
-        //         console.log('srcset attribute removed');
-        //         image.src = './img/hero/mobile-banner.png';
-        //         // clearInterval(aboutImgInterval);
-        //     }
-
-        // }, 1000);
-
-        // const dwnlbtnInterval = setInterval(() => {
-        //         const dwnldBtn = document.getElementById('downloadBtn');
-        //         if(dwnldBtn){
-        //             clearInterval(dwnlbtnInterval);
-        //             dwnldBtn.addEventListener('click', function() {
-        //                 const link = document.createElement('a'); // Create an anchor element
-        //                 link.href = './assets/pdf/Sanjay Panchal CV.pdf';       // Path to your PDF file
-        //                 link.download = 'sanjay panchal cv.pdf';     // Custom file name for download
-        //                 link.click();                             // Trigger the download
-        //             });
-        //         }
-        //     }, 2000);
 
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -236,56 +190,12 @@
             // });
             if (typeof emailjs !== 'undefined') {
                 console.log('EmailJS is loaded and initialized.');
-                // emailjs.send('service_alwb0dv', 'template_8ltuqug', { 
-                //                     name: 'Steave',
-                //     user_email: 'cohasi6031@kimasoft.com',
-                //     subject: "Contact to Sanjay Panchal", // You can change the subject if needed
-                //     message: 'Hey There '
-                // })
-                // .then(() => {
-                // alert("Email sent successfully!");
-                // })
-                // .catch((error) => {
-                // console.error("Email sending failed:", error);
-                // alert("Failed to send email. Please try again.");
-                // });
-
-                // document.getElementById("sendMailButton").addEventListener("click", () => {
-                //     const name = document.getElementsByName("name").value;
-                //     const user_email = document.getElementsByName("user_email").value;
-                //     const subject = document.getElementsByName("subject").value;
-                //     const message = document.getElementsByName("message").value;
-
-                //     // Validate inputs (optional but recommended)
-                //     if (!name || !user_email || !subject || !message) {
-                //         alert("Please fill out all fields.");
-                //         return;
-                //     }
-
-                //     const emailParams = {
-                //         name: name,
-                //         user_email: user_email,
-                //         subject: "Contact to Sanjay Panchal", // You can change the subject if needed
-                //         message: message,
-                //     };
-
-
-                //     emailjs.send('service_alwb0dv', 'template_8ltuqug', emailParams)
-                //         .then(() => {
-                //             alert("Email sent successfully!");
-                //         })
-                //         .catch((error) => {
-                //             console.error("Email sending failed:", error);
-                //             alert("Failed to send email. Please try again.");
-                //         });
-                // })
             } else {
                 console.log('EmailJS is not loaded or initialization failed.');
             }
         })();
 
     </script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> -->
     <script src="./public/js/particles.js"></script>
     <script>
         particlesJS('particles-js',
@@ -293,7 +203,7 @@
             {
                 "particles": {
                     "number": {
-                        "value": 20,
+                        "value": 100,
                         "density": {
                             "enable": true,
                             "value_area": 800
@@ -448,6 +358,15 @@
     //     }
     //   }
     // });
+
+    $(window).on('scroll', function() {
+        var position = $(this).scrollTop();
+        if( position >= $('.my-skills').scrollTop() ) {
+            $('.percentag-circle').addClass('circle');
+        } else {
+            $('.percentag-circle').removeClass('circle');
+        }
+    });
     </script>
 </body>
 
