@@ -21099,7 +21099,10 @@ xclip
 
 .percentage-bar {
     .single-chart {
+        position: relative;
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .circle-bg {
@@ -21128,13 +21131,10 @@ xclip
         fill: #666;
         font-family: sans-serif;
         text-anchor: middle;
-        line-height: 35px;
         text-align: center;
-        margin-top: 45px;
-        margin-left: 115px;
         position: absolute;
         z-index: 100;
-        font-weight: 700;
-        font-size: 1.5em;
+        font-weight: 500;
+        font-size: 1.3em;
     }
 }

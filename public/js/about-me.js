@@ -413,8 +413,6 @@ emailjs.init({
                                                             ] 
                                                             }),
                                                     (0, A.jsxs)("text", {
-                                                        x:"18" ,
-                                                        y:"20.35", 
                                                         class:"percentage",
                                                         children: [e.skillPercent, "%"] }),
                                                 ],
@@ -647,7 +645,8 @@ emailjs.init({
                 h = () => {
                     let [e, s] = (0, l.useState)(!1);
                     function a() {
-                        s(!e);
+                        // s(!e);
+                        document.getElementById('tab:r0:1').click()
                     }
                     return (0, A.jsxs)(A.Fragment, {
                         children: [
